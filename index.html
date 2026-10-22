@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>THADATHIL Family Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&family=Playfair+Display:wght@600;800&family=Nunito+Sans:wght@400;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ============ HEADER: logo + navigation ============ -->
+    <header>
+        <div class="in">
+            <a class="brand" href="#" onclick="go('home');return false" aria-label="Home">
+                <span id="logo"><img src="image/logo.jpeg" alt=""><circle cx="32" cy="32" r="31" fill="#0e4d38"/><circle cx="32" cy="32" r="27.5" fill="none" stroke="#f0a500" stroke-width="1.6" stroke-dasharray="1.5 4" stroke-linecap="round"/><path d="M32 52V35M32 42.5l-9-7.5M32 40l9-8" stroke="#f0a500" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="32" cy="22.5" r="9.5" fill="#f0a500"/><circle cx="21.5" cy="30.5" r="5.5" fill="#f6c94d"/><circle cx="42.5" cy="30.5" r="5.5" fill="#f6c94d"/></svg></span>
+                <span class="brand-t"><b id="hname">THADATHIL</b><small id="htag"></small></span>
+            </a>
+            <nav id="nav" aria-label="Main sections">
+                <button data-p="home"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 11.5 12 4l8.5 7.5M5.5 10v10h13V10M10 20v-5.5h4V20"/></svg></i><span>Home</span></button>
+                <button data-p="family"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="5" r="2.6"/><circle cx="5.5" cy="18.5" r="2.6"/><circle cx="18.5" cy="18.5" r="2.6"/><path d="M12 7.6v4.4M12 12l-6.5 4M12 12l6.5 4"/></svg></i><span>Family</span></button>
+                <button data-p="committee"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.3"/><path d="M17 14c2.5 0 4 1.8 4 4.5"/></svg></i><span>Committee</span></button>
+                <button data-p="meetups"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></i><span>Meetups</span></button>
+                <button data-p="programs"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V4M5 5h12l-2 4 2 4H5"/></svg></i><span>Programs</span></button>
+                <button data-p="fin"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 8h7M8.5 11.5h7M8.5 8c4.5 0 4.5 5.5 0 5.5l4 3.5"/></svg></i><span>Finance</span></button>
+                <button data-p="cel"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="10" width="17" height="10" rx="2"/><path d="M12 10v10M3.5 14.5h17M12 10C9.5 10 8 8.8 8 7.5S9 5 10.2 5.4C11.6 5.9 12 8 12 10zm0 0c2.5 0 4-1.2 4-2.5S15 5 13.8 5.4C12.4 5.9 12 8 12 10z"/></svg></i><span>Celebrations</span></button>
+                <button data-p="gallery"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2.5"/><circle cx="9" cy="10" r="1.7"/><path d="M4 18l5-5 4 4 3-3 4.5 4"/></svg></i><span>Gallery</span></button>
+                <button data-p="poster"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 15v5M16.5 17.5h5"/></svg></i><span>Posters</span></button>
+            </nav>
+            <button class="tgl" id="tgl" aria-label="Switch between light and dark theme">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                    <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8" />
+                    <path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main id="app">
+
+        <!-- ============ HOME ============ -->
+        <section id="p-home" class="page">
+
+            <!-- hero: family name, tagline, banner (or the default pookalam) in an arch -->
+            <div class="hero" id="hero">
+                <div class="hero-copy">
+                    <h2 id="hero-t"></h2>
+                    <p class="hero-tag" id="hero-tag"></p>
+                    <p class="hero-s" id="hero-s"></p>
+                    <div class="acts">
+                        <button class="btn gold" onclick="go('meetups');openDlg('meetup')">Plan a meetup</button>
+                        <button class="btn light" onclick="openDlg('member')">Add member</button>
+                        <button class="btn light" onclick="$('#bn').click()">Change banner</button>
+                        <input type="file" id="bn" accept="image/*" hidden>
+                    </div>
+                </div>
+                <figure class="hero-art" id="hero-art">
+                    <!--<svg class="pookalam" viewBox="0 0 400 400" aria-hidden="true" focusable="false">
+                        <defs>
+                            <path id="pk-a" d="M200 62.0C208.5 45.8 204.7 15.6 200 8.0C195.3 15.6 191.5 45.8 200 62.0Z" fill="#f0a500" />
+                            <path id="pk-b" d="M200 74.0C206.0 63.8 203.3 44.8 200 40.0C196.7 44.8 194.0 63.8 200 74.0Z" fill="#fff6dc" />
+                            <path id="pk-c" d="M200 112.0C215.0 95.8 208.2 65.6 200 58.0C191.8 65.6 185.0 95.8 200 112.0Z" fill="#b3321f" />
+                            <path id="pk-d" d="M200 112.0C208.0 101.2 204.4 81.0 200 76.0C195.6 81.0 192.0 101.2 200 112.0Z" fill="#f0a500" />
+                            <path id="pk-e" d="M200 152.0C215.0 135.8 208.2 105.6 200 98.0C191.8 105.6 185.0 135.8 200 152.0Z" fill="#6dbf67" />
+                            <path id="pk-f" d="M200 154.0C208.0 143.2 204.4 123.0 200 118.0C195.6 123.0 192.0 143.2 200 154.0Z" fill="#fff6dc" />
+                            <path id="pk-g" d="M200 182.0C212.0 169.4 206.6 145.9 200 140.0C193.4 145.9 188.0 169.4 200 182.0Z" fill="#f0a500" />
+                        </defs>
+                        <circle cx="200" cy="200" r="198" fill="#0d4a37" />
+                        <circle cx="200" cy="200" r="198" fill="none" stroke="#f0a500" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round" />
+                        <use href="#pk-a" />
+                        <use href="#pk-a" transform="rotate(10 200 200)" />
+                        <use href="#pk-a" transform="rotate(20 200 200)" />
+                        <use href="#pk-a" transform="rotate(30 200 200)" />
+                        <use href="#pk-a" transform="rotate(40 200 200)" />
+                        <use href="#pk-a" transform="rotate(50 200 200)" />
+                        <use href="#pk-a" transform="rotate(60 200 200)" />
+                        <use href="#pk-a" transform="rotate(70 200 200)" />
+                        <use href="#pk-a" transform="rotate(80 200 200)" />
+                        <use href="#pk-a" transform="rotate(90 200 200)" />
+                        <use href="#pk-a" transform="rotate(100 200 200)" />
+                        <use href="#pk-a" transform="rotate(110 200 200)" />
+                        <use href="#pk-a" transform="rotate(120 200 200)" />
+                        <use href="#pk-a" transform="rotate(130 200 200)" />
+                        <use href="#pk-a" transform="rotate(140 200 200)" />
+                        <use href="#pk-a" transform="rotate(150 200 200)" />
+                        <use href="#pk-a" transform="rotate(160 200 200)" />
+                        <use href="#pk-a" transform="rotate(170 200 200)" />
+                        <use href="#pk-a" transform="rotate(180 200 200)" />
+                        <use href="#pk-a" transform="rotate(190 200 200)" />
+                        <use href="#pk-a" transform="rotate(200 200 200)" />
+                        <use href="#pk-a" transform="rotate(210 200 200)" />
+                        <use href="#pk-a" transform="rotate(220 200 200)" />
+                        <use href="#pk-a" transform="rotate(230 200 200)" />
+                        <use href="#pk-a" transform="rotate(240 200 200)" />
+                        <use href="#pk-a" transform="rotate(250 200 200)" />
+                        <use href="#pk-a" transform="rotate(260 200 200)" />
+                        <use href="#pk-a" transform="rotate(270 200 200)" />
+                        <use href="#pk-a" transform="rotate(280 200 200)" />
+                        <use href="#pk-a" transform="rotate(290 200 200)" />
+                        <use href="#pk-a" transform="rotate(300 200 200)" />
+                        <use href="#pk-a" transform="rotate(310 200 200)" />
+                        <use href="#pk-a" transform="rotate(320 200 200)" />
+                        <use href="#pk-a" transform="rotate(330 200 200)" />
+                        <use href="#pk-a" transform="rotate(340 200 200)" />
+                        <use href="#pk-a" transform="rotate(350 200 200)" />
+                        <use href="#pk-b" transform="rotate(5 200 200)" />
+                        <use href="#pk-b" transform="rotate(15 200 200)" />
+                        <use href="#pk-b" transform="rotate(25 200 200)" />
+                        <use href="#pk-b" transform="rotate(35 200 200)" />
+                        <use href="#pk-b" transform="rotate(45 200 200)" />
+                        <use href="#pk-b" transform="rotate(55 200 200)" />
+                        <use href="#pk-b" transform="rotate(65 200 200)" />
+                        <use href="#pk-b" transform="rotate(75 200 200)" />
+                        <use href="#pk-b" transform="rotate(85 200 200)" />
+                        <use href="#pk-b" transform="rotate(95 200 200)" />
+                        <use href="#pk-b" transform="rotate(105 200 200)" />
+                        <use href="#pk-b" transform="rotate(115 200 200)" />
+                        <use href="#pk-b" transform="rotate(125 200 200)" />
+                        <use href="#pk-b" transform="rotate(135 200 200)" />
+                        <use href="#pk-b" transform="rotate(145 200 200)" />
+                        <use href="#pk-b" transform="rotate(155 200 200)" />
+                        <use href="#pk-b" transform="rotate(165 200 200)" />
+                        <use href="#pk-b" transform="rotate(175 200 200)" />
+                        <use href="#pk-b" transform="rotate(185 200 200)" />
+                        <use href="#pk-b" transform="rotate(195 200 200)" />
+                        <use href="#pk-b" transform="rotate(205 200 200)" />
+                        <use href="#pk-b" transform="rotate(215 200 200)" />
+                        <use href="#pk-b" transform="rotate(225 200 200)" />
+                        <use href="#pk-b" transform="rotate(235 200 200)" />
+                        <use href="#pk-b" transform="rotate(245 200 200)" />
+                        <use href="#pk-b" transform="rotate(255 200 200)" />
+                        <use href="#pk-b" transform="rotate(265 200 200)" />
+                        <use href="#pk-b" transform="rotate(275 200 200)" />
+                        <use href="#pk-b" transform="rotate(285 200 200)" />
+                        <use href="#pk-b" transform="rotate(295 200 200)" />
+                        <use href="#pk-b" transform="rotate(305 200 200)" />
+                        <use href="#pk-b" transform="rotate(315 200 200)" />
+                        <use href="#pk-b" transform="rotate(325 200 200)" />
+                        <use href="#pk-b" transform="rotate(335 200 200)" />
+                        <use href="#pk-b" transform="rotate(345 200 200)" />
+                        <use href="#pk-b" transform="rotate(355 200 200)" />
+                        <use href="#pk-c" />
+                        <use href="#pk-c" transform="rotate(15 200 200)" />
+                        <use href="#pk-c" transform="rotate(30 200 200)" />
+                        <use href="#pk-c" transform="rotate(45 200 200)" />
+                        <use href="#pk-c" transform="rotate(60 200 200)" />
+                        <use href="#pk-c" transform="rotate(75 200 200)" />
+                        <use href="#pk-c" transform="rotate(90 200 200)" />
+                        <use href="#pk-c" transform="rotate(105 200 200)" />
+                        <use href="#pk-c" transform="rotate(120 200 200)" />
+                        <use href="#pk-c" transform="rotate(135 200 200)" />
+                        <use href="#pk-c" transform="rotate(150 200 200)" />
+                        <use href="#pk-c" transform="rotate(165 200 200)" />
+                        <use href="#pk-c" transform="rotate(180 200 200)" />
+                        <use href="#pk-c" transform="rotate(195 200 200)" />
+                        <use href="#pk-c" transform="rotate(210 200 200)" />
+                        <use href="#pk-c" transform="rotate(225 200 200)" />
+                        <use href="#pk-c" transform="rotate(240 200 200)" />
+                        <use href="#pk-c" transform="rotate(255 200 200)" />
+                        <use href="#pk-c" transform="rotate(270 200 200)" />
+                        <use href="#pk-c" transform="rotate(285 200 200)" />
+                        <use href="#pk-c" transform="rotate(300 200 200)" />
+                        <use href="#pk-c" transform="rotate(315 200 200)" />
+                        <use href="#pk-c" transform="rotate(330 200 200)" />
+                        <use href="#pk-c" transform="rotate(345 200 200)" />
+                        <use href="#pk-d" transform="rotate(7.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(22.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(37.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(52.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(67.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(82.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(97.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(112.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(127.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(142.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(157.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(172.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(187.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(202.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(217.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(232.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(247.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(262.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(277.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(292.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(307.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(322.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(337.5 200 200)" />
+                        <use href="#pk-d" transform="rotate(352.5 200 200)" />
+                        <use href="#pk-e" />
+                        <use href="#pk-e" transform="rotate(22.5 200 200)" />
+                        <use href="#pk-e" transform="rotate(45 200 200)" />
+                        <use href="#pk-e" transform="rotate(67.5 200 200)" />
+                        <use href="#pk-e" transform="rotate(90 200 200)" />
+                        <use href="#pk-e" transform="rotate(112.5 200 200)" />
+                        <use href="#pk-e" transform="rotate(135 200 200)" />
+                        <use href="#pk-e" transform="rotate(157.5 200 200)" />
+                        <use href="#pk-e" transform="rotate(180 200 200)" />
+                        <use href="#pk-e" transform="rotate(202.5 200 200)" />
+                        <use href="#pk-e" transform="rotate(225 200 200)" />
+                        <use href="#pk-e" transform="rotate(247.5 200 200)" />
+                        <use href="#pk-e" transform="rotate(270 200 200)" />
+                        <use href="#pk-e" transform="rotate(292.5 200 200)" />
+                        <use href="#pk-e" transform="rotate(315 200 200)" />
+                        <use href="#pk-e" transform="rotate(337.5 200 200)" />
+                        <use href="#pk-f" transform="rotate(11.25 200 200)" />
+                        <use href="#pk-f" transform="rotate(33.75 200 200)" />
+                        <use href="#pk-f" transform="rotate(56.25 200 200)" />
+                        <use href="#pk-f" transform="rotate(78.75 200 200)" />
+                        <use href="#pk-f" transform="rotate(101.25 200 200)" />
+                        <use href="#pk-f" transform="rotate(123.75 200 200)" />
+                        <use href="#pk-f" transform="rotate(146.25 200 200)" />
+                        <use href="#pk-f" transform="rotate(168.75 200 200)" />
+                        <use href="#pk-f" transform="rotate(191.25 200 200)" />
+                        <use href="#pk-f" transform="rotate(213.75 200 200)" />
+                        <use href="#pk-f" transform="rotate(236.25 200 200)" />
+                        <use href="#pk-f" transform="rotate(258.75 200 200)" />
+                        <use href="#pk-f" transform="rotate(281.25 200 200)" />
+                        <use href="#pk-f" transform="rotate(303.75 200 200)" />
+                        <use href="#pk-f" transform="rotate(326.25 200 200)" />
+                        <use href="#pk-f" transform="rotate(348.75 200 200)" />
+                        <use href="#pk-g" />
+                        <use href="#pk-g" transform="rotate(45 200 200)" />
+                        <use href="#pk-g" transform="rotate(90 200 200)" />
+                        <use href="#pk-g" transform="rotate(135 200 200)" />
+                        <use href="#pk-g" transform="rotate(180 200 200)" />
+                        <use href="#pk-g" transform="rotate(225 200 200)" />
+                        <use href="#pk-g" transform="rotate(270 200 200)" />
+                        <use href="#pk-g" transform="rotate(315 200 200)" />
+                        <circle cx="200" cy="200" r="22" fill="#b3321f" />
+                        <circle cx="200" cy="200" r="10" fill="#f0a500" />
+                    </svg>-->
+                    <img id="hero-img" alt="" hidden>
+                    <img src="image/logo.jpeg" alt="">
+                </figure>
+            </div>
+
+            <!-- first-run checklist (hides itself when finished or dismissed) -->
+            <aside class="start" id="home-start" aria-label="Set up your family hub" hidden>
+                <div class="panel-h">
+                    <h3>Set up your family hub</h3><span class="mut" id="start-n"></span>
+                    <button class="more" onclick="hideStart()">Hide</button>
+                </div>
+                <ul class="steps">
+                    <li data-step="members">
+                        <button onclick="openDlg('member')">Add your eldest family member</button>
+                    </li>
+                    <li data-step="logo">
+                        <button onclick="go('family');openDlg('family')">Upload the family logo</button>
+                    </li>
+                    <li data-step="banner">
+                        <button onclick="$('#bn').click()">Add a banner photo</button>
+                    </li>
+                    <li data-step="committee">
+                        <button onclick="go('committee')">Fill in the committee posts</button>
+                    </li>
+                    <li data-step="meetup">
+                        <button onclick="go('meetups');openDlg('meetup')">Plan your first meetup</button>
+                    </li>
+                    <li data-step="gallery">
+                        <button onclick="go('gallery');openDlg('gallery')">Add a Google Drive album</button>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- quick numbers, each one opens its page -->
+            <div class="figs" id="home-stats"></div>
+
+            <div class="home-grid">
+                <article class="next" id="home-next"></article>
+
+                <section class="panel p-cel" aria-labelledby="h-cel">
+                    <div class="panel-h">
+                        <h3 id="h-cel">Coming up</h3>
+                        <button class="more" onclick="go('cel')">See all</button>
+                    </div>
+                    <div id="home-cel"></div>
+                </section>
+
+                <section class="panel p-com" aria-labelledby="h-com">
+                    <div class="panel-h">
+                        <h3 id="h-com">Committee</h3>
+                        <button class="more" onclick="go('committee')">Open</button>
+                    </div>
+                    <p class="mut" id="home-com-t"></p>
+                    <div id="home-com"></div>
+                </section>
+
+                <section class="panel p-fin" aria-labelledby="h-fin">
+                    <div class="panel-h">
+                        <h3 id="h-fin">Family fund</h3>
+                        <button class="more" onclick="go('fin')">Open</button>
+                    </div>
+                    <div id="home-fin"></div>
+                </section>
+
+                <section class="panel p-fam" aria-labelledby="h-fam">
+                    <div class="panel-h">
+                        <h3 id="h-fam">Family</h3>
+                        <button class="more" onclick="go('family')">Family tree</button>
+                    </div>
+                    <div id="home-fam"></div>
+                </section>
+            </div>
+        </section>
+
+        <!-- ============ FAMILY ============ -->
+        <section id="p-family" class="page" hidden>
+            <div class="card row">
+                <div>
+                    <h2 id="fam-t"></h2>
+                    <p class="mut" id="fam-s"></p>
+                </div>
+                <button class="btn g" onclick="openDlg('family')">Edit family &amp; logo</button>
+            </div>
+            <div class="row">
+                <h2>Family tree</h2>
+                <button class="btn" onclick="openDlg('member')">+ Add member</button>
+            </div>
+            <p class="mut" style="margin-top:-8px">Set each member's father and mother and the tree builds itself, one tree for every branch. Click anyone to open their profile.</p>
+            <div id="tree"></div>
+            <div class="row" style="margin-top:26px">
+                <h2>All members</h2>
+                <select id="gen-f" onchange="rFamily()">
+                    <option value="">All generations</option>
+                    <option value="1">1st generation</option>
+                    <option value="2">2nd generation</option>
+                    <option value="3">3rd generation</option>
+                    <option value="4">4th generation</option>
+                    <option value="5">5th generation</option>
+                </select>
+            </div>
+            <div class="grid" id="members"></div>
+        </section>
+
+        <!-- ============ MEMBER PROFILE ============ -->
+        <section id="p-profile" class="page" hidden>
+            <button class="btn g" onclick="go('family')" style="margin-bottom:16px">← Back to family</button>
+            <div id="profile"></div>
+        </section>
+
+        <!-- ============ COMMITTEE ============ -->
+        <section id="p-committee" class="page" hidden>
+            <div class="row">
+                <h2>Committee</h2>
+                <div class="acts" style="margin:0">
+                    <button class="btn g" onclick="openDlg('committee')">+ New committee</button>
+                    <button class="btn" onclick="openDlg('post')">+ Add post</button>
+                </div>
+            </div>
+            <div id="com-cur"></div>
+            <h2 style="margin:30px 0 12px">Previous committees</h2>
+            <div id="com-prev"></div>
+        </section>
+
+        <!-- ============ MEETUPS ============ -->
+        <section id="p-meetups" class="page" hidden>
+            <div class="row">
+                <h2>Meetups</h2>
+                <button class="btn" onclick="openDlg('meetup')">+ Plan meetup</button>
+            </div>
+            <div class="grid" id="meet-list"></div>
+        </section>
+
+        <!-- ============ PROGRAMS ============ -->
+        <section id="p-programs" class="page" hidden>
+            <div class="row">
+                <h2>Programs, games &amp; gifts</h2>
+                <div class="acts" style="margin:0">
+                    <select id="prog-f" onchange="rPrograms()"></select>
+                    <button class="btn" onclick="openDlg('program')">+ Add item</button>
+                </div>
+            </div>
+            <div id="prog-list"></div>
+        </section>
+
+        <!-- ============ FINANCE ============ -->
+        <section id="p-fin" class="page" hidden>
+            <div class="row">
+                <h2>Finance</h2>
+                <button class="btn" onclick="openDlg('fin')">+ Add entry</button>
+            </div>
+            <div class="grid" id="fin-stats"></div>
+            <section class="card" aria-label="Filter finance records" style="margin-top:16px">
+                <div class="row" style="align-items:end;gap:12px;flex-wrap:wrap">
+                    <label style="flex:1;min-width:180px">Program / meetup
+                        <select id="fin-meetup-f" onchange="rFin()" style="width:100%">
+                            <option value="">All meetups</option>
+                        </select>
+                    </label>
+                    <label style="flex:1;min-width:150px">Transaction type
+                        <select id="fin-type-f" onchange="rFin()" style="width:100%">
+                            <option value="">All types</option>
+                            <option value="Income">Income</option>
+                            <option value="Sponsor">Sponsor</option>
+                            <option value="Expense">Expense</option>
+                        </select>
+                    </label>
+                    <label style="flex:1;min-width:150px">From date
+                        <input type="date" id="fin-from-f" onchange="rFin()" style="width:100%">
+                    </label>
+                    <label style="flex:1;min-width:150px">To date
+                        <input type="date" id="fin-to-f" onchange="rFin()" style="width:100%">
+                    </label>
+                    <label style="flex:2;min-width:200px">Search name, item or note
+                        <input type="search" id="fin-search-f" oninput="rFin()" placeholder="Search finance records..." style="width:100%">
+                    </label>
+                    <button class="btn g" type="button" onclick="resetFinFilters()">Reset filters</button>
+                </div>
+                <p class="mut" id="fin-filter-count" style="margin:12px 0 0"></p>
+            </section>
+            <div class="scroll" style="margin-top:16px">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Details</th>
+                            <th>Meetup</th>
+                            <th>Amount</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="fin-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ============ CELEBRATIONS ============ -->
+        <section id="p-cel" class="page" hidden>
+            <h2 style="margin-bottom:14px">Birthdays &amp; anniversaries</h2>
+            <div class="grid" id="cel-list"></div>
+        </section>
+
+        <!-- ============ GALLERY (Google Drive links) ============ -->
+        <section id="p-gallery" class="page" hidden>
+            <div class="row">
+                <h2>Gallery</h2>
+                <div class="acts" style="margin:0">
+                    <select id="gal-f" onchange="rGallery()"></select>
+                    <button class="btn" onclick="openDlg('gallery')">+ Add Drive link</button>
+                </div>
+            </div>
+            <p class="mut" style="margin-top:-8px">Upload photos to Google Drive, set sharing to "Anyone with the link", and paste the folder or album link here.</p>
+            <div class="grid" id="gal-list"></div>
+        </section>
+
+        <!-- ============ POSTERS ============ -->
+        <section id="p-poster" class="page" hidden>
+            <h2 style="margin-bottom:14px">Poster studio</h2>
+            <div class="pz">
+                <div class="card ctl">
+                    <label>Poster type
+                        <select id="pz-type" onchange="fillItems()">
+                            <option value="meetup">Family meetup</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="anniversary">Anniversary</option>
+                        </select>
+                    </label>
+                    <label>Choose
+                        <select id="pz-item" onchange="draw()"></select>
+                    </label>
+                    <label>Colour theme
+                        <select id="pz-theme" onchange="draw()">
+                            <option value="0">Backwater green</option>
+                            <option value="1">Royal blue</option>
+                            <option value="2">Navy</option>
+                            <option value="3">Maroon</option>
+                            <option value="4">Purple</option>
+                        </select>
+                    </label>
+                    <button class="btn" id="pz-dl">⬇ Download PNG</button>
+                    <p class="mut">Birthday and anniversary posters use the member's photo. Anniversary posters also use the spouse photo, so add both in the member form.</p>
+                </div>
+                <div>
+                    <canvas id="cv" width="1080" height="1080" aria-label="Poster preview"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="foot" class="site-footer">
+        <div class="footer-inner">
+            <a class="footer-brand" href="#" onclick="go('home');return false" aria-label="Back to home"><span class="footer-mark" aria-hidden="true">T</span><span><strong id="foot-name">Thadathil Family Hub</strong><small id="foot-credit">A place to connect, remember and celebrate</small></span></a>
+            <p class="footer-note">Keeping our roots close and our memories alive.</p>
+            <div class="footer-bottom"><span>© <span id="foot-year"></span> Thadathil Family Hub</span><span>Made for family, with family <span aria-hidden="true">♥</span></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============ FORMS (dialogs) ============ -->
+    <dialog id="d-family">
+        <form data-k="family">
+            <h2>Family &amp; logo</h2>
+            <div class="fg">
+                <label>Family name
+                    <input name="name" required>
+                </label>
+                <label>Established year
+                    <input name="est">
+                </label>
+                <label class="w">Tagline
+                    <input name="tagline">
+                </label>
+                <label class="w">Created by
+                    <input name="by">
+                </label>
+                <label class="w">Social handle for posters
+                    <input name="handle" placeholder="@thadathil_family">
+                </label>
+                <label class="w">Logo image (square works best)
+                    <input type="file" data-to="logo" data-max="240" data-sq="1" accept="image/*">
+                    <input type="hidden" name="logo"><img class="pv" data-f="logo" alt=""></label>
+            </div>
+            <div class="end">
+                <button type="button" class="btn g" data-close>Cancel</button>
+                <button class="btn">Save</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="d-member">
+        <form data-k="member">
+            <h2>Member details</h2>
+            <input type="hidden" name="id">
+            <div class="fg">
+                <label class="w">Full name
+                    <input name="name" required>
+                </label>
+                <label>Generation
+                    <select name="gen">
+                        <option value="1">1st (eldest)</option>
+                        <option value="2">2nd</option>
+                        <option value="3">3rd</option>
+                        <option value="4">4th</option>
+                        <option value="5">5th</option>
+                    </select>
+                </label>
+                <label>Gender
+                    <select name="gender">
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </label>
+                <label>Father
+                    <select name="father" data-src="members" data-blank="— not in list —"></select>
+                </label>
+                <label>Mother
+                    <select name="mother" data-src="members" data-blank="— not in list —"></select>
+                </label>
+                <label>Spouse name
+                    <input name="spouse">
+                </label>
+                <label>Wedding anniversary
+                    <input type="date" name="ann">
+                </label>
+                <label>Date of birth
+                    <input type="date" name="dob">
+                </label>
+                <label>Date of death (if passed away)
+                    <input type="date" name="dod">
+                </label>
+                <label>Education
+                    <input name="edu" placeholder="e.g. B.Tech, MBBS">
+                </label>
+                <label>Job / occupation
+                    <input name="job">
+                </label>
+                <label>Phone
+                    <input name="phone">
+                </label>
+                <label>Place
+                    <input name="place">
+                </label>
+                <label class="w">Siblings (names)
+                    <input name="sibs" placeholder="Brothers and sisters, comma separated">
+                </label>
+                <label class="w">About
+                    <textarea name="about"></textarea>
+                </label>
+                <label>Photo
+                    <input type="file" data-to="photo" data-max="640" data-sq="1" accept="image/*">
+                    <input type="hidden" name="photo"><img class="pv" data-f="photo" alt=""></label>
+                <label>Spouse photo
+                    <input type="file" data-to="sphoto" data-max="640" data-sq="1" accept="image/*">
+                    <input type="hidden" name="sphoto"><img class="pv" data-f="sphoto" alt=""></label>
+            </div>
+            <div class="end">
+                <button type="button" class="btn g" data-close>Cancel</button>
+                <button class="btn">Save</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="d-committee">
+        <form data-k="committee">
+            <h2>Committee</h2>
+            <input type="hidden" name="id">
+            <div class="fg">
+                <label class="w">Name
+                    <input name="name" required placeholder="1st Committee, 2nd Committee, Current Committee...">
+                </label>
+                <label>Term
+                    <input name="term" placeholder="2026 – 2028">
+                </label>
+                <label class="chk">
+                    <input type="checkbox" name="cur"> This is the current committee</label>
+            </div>
+            <div class="end">
+                <button type="button" class="btn g" data-close>Cancel</button>
+                <button class="btn">Save</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="d-post">
+        <form data-k="post">
+            <h2>Committee post</h2>
+            <input type="hidden" name="id">
+            <div class="fg">
+                <label class="w">Committee
+                    <select name="cid" data-src="committees" required></select>
+                </label>
+                <label>Post
+                    <input name="role" required placeholder="President, Vice President...">
+                </label>
+                <label>Person
+                    <input name="person" list="dl-mem" placeholder="Pick a member or type a name">
+                </label>
+                <label>Phone
+                    <input name="phone">
+                </label>
+            </div>
+            <datalist id="dl-mem"></datalist>
+            <div class="end">
+                <button type="button" class="btn g" data-close>Cancel</button>
+                <button class="btn">Save</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="d-meetup">
+        <form data-k="meetup">
+            <h2>Meetup</h2>
+            <input type="hidden" name="id">
+            <div class="fg">
+                <label class="w">Title
+                    <input name="title" required placeholder="Annual Family Meetup 2026">
+                </label>
+                <label>Date
+                    <input type="date" name="date" required>
+                </label>
+                <label>Time
+                    <input name="time" placeholder="10:00 AM">
+                </label>
+                <label class="w">Venue
+                    <input name="venue">
+                </label>
+                <label class="w">Purpose of meeting
+                    <textarea name="purpose"></textarea>
+                </label>
+            </div>
+            <div class="end">
+                <button type="button" class="btn g" data-close>Cancel</button>
+                <button class="btn">Save</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="d-program">
+        <form data-k="program">
+            <h2>Program / game / gift</h2>
+            <input type="hidden" name="id">
+            <div class="fg">
+                <label>Meetup
+                    <select name="mid" data-src="meetups" required></select>
+                </label>
+                <label>Category
+                    <select name="cat">
+                        <option>Program</option>
+                        <option>Game</option>
+                        <option>Gift</option>
+                        <option>Prize</option>
+                    </select>
+                </label>
+                <label class="w">Title
+                    <input name="title" required placeholder="Tug of war, Welcome speech, Lucky draw...">
+                </label>
+                <label>Time
+                    <input name="time" placeholder="11:30 AM">
+                </label>
+                <label>In charge
+                    <input name="incharge">
+                </label>
+                <label>Prize / gift
+                    <input name="reward">
+                </label>
+                <label>Sponsored by
+                    <input name="sponsor">
+                </label>
+                <label class="w">Details
+                    <textarea name="details"></textarea>
+                </label>
+            </div>
+            <div class="end">
+                <button type="button" class="btn g" data-close>Cancel</button>
+                <button class="btn">Save</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="d-fin">
+        <form data-k="fin">
+            <h2>Finance entry</h2>
+            <input type="hidden" name="id">
+            <div class="fg">
+                <label>Type
+                    <select name="type">
+                        <option>Income</option>
+                        <option>Sponsor</option>
+                        <option>Expense</option>
+                    </select>
+                </label>
+                <label>Amount (₹)
+                    <input type="number" name="amt" required min="0">
+                </label>
+                <label class="w">Name / item
+                    <input name="title" required placeholder="Sponsor name, contribution, food...">
+                </label>
+                <label>Date
+                    <input type="date" name="date" required>
+                </label>
+                <label>Meetup
+                    <select name="mid" data-src="meetups" data-blank="General"></select>
+                </label>
+                <label class="w">Note
+                    <input name="note">
+                </label>
+            </div>
+            <div class="end">
+                <button type="button" class="btn g" data-close>Cancel</button>
+                <button class="btn">Save</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="d-gallery">
+        <form data-k="gallery">
+            <h2>Google Drive link</h2>
+            <input type="hidden" name="id">
+            <div class="fg">
+                <label class="w">Album
+                    <input name="album" list="dl-alb" required placeholder="Meetup 2026, Onam, Weddings...">
+                </label>
+                <label class="w">Title
+                    <input name="title" required>
+                </label>
+                <label class="w">Google Drive link
+                    <input type="url" name="link" required placeholder="https://drive.google.com/...">
+                </label>
+                <label class="w">Note
+                    <input name="note">
+                </label>
+            </div>
+            <datalist id="dl-alb"></datalist>
+            <div class="end">
+                <button type="button" class="btn g" data-close>Cancel</button>
+                <button class="btn">Save</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
